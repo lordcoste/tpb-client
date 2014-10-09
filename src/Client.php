@@ -8,7 +8,7 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class Client extends \Goutte\Client
 {
-    protected $baseUrl = 'http://thepiratebay.se';
+    protected $baseUrl = 'http://fastpiratebay.eu';
 
     protected $categories = array(
         'audio',
@@ -44,7 +44,7 @@ class Client extends \Goutte\Client
 
     public function search($term, $page = 1, $category = 'all', $sort = true)
     {
-        $categories = array_filter($this->categories, function($value) use ($category) {
+        $categories = array_filter($this->categories, function ($value) use ($category) {
             return ($category === 'all' || $value === $category);
         });
         $params = array('q' => $term, 'page' => $page - 1);
