@@ -35,11 +35,14 @@ class Client extends \Goutte\Client
 
     protected function filterResponse($response)
     {
+        return $response;
+        /*
         return new Response(
             gzinflate(substr($response->getContent(), 10)),
             $response->getStatus(),
             $response->getHeaders()
         );
+        */
     }
 
     public function search($term, $page = 1, $category = 'all', $sort = true)
