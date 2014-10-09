@@ -5,7 +5,7 @@
     "license": "BSD-2-Clause",
     "require": {
         "php": ">=5.3.3",
-        "fabpot/goutte": "2.0.*@dev",
+        "fabpot/goutte": "2.0.*@dev"
     },
     "autoload": {
         "classmap": [
